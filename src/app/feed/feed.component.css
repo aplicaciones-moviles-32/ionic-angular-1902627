@@ -1,0 +1,16 @@
+.usuario {
+  color: gray;
+  font-size: 12px;
+  padding: 20px 10px;
+}
+
+.caption {
+  color: darkgray;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.card {
+  border: solid 1px black;
+  margin-top: 5px;
+}

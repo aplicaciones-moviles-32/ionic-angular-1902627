@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-basico-1902627';
+  total = 90;
+  esCierto = true;
 }

@@ -1,0 +1,16 @@
+<ion-content>
+  
+  <div *ngFor="let imagen of imagenes">
+    <img src={{imagen}} alt="" width="250px">
+  </div>
+
+  <ion-card *ngFor="let perro of perros">
+    <ion-card-header>
+      <p class="usuario">{{perro.nombre}}</p>
+    </ion-card-header>
+    <ion-card-content>
+      <img src={{perro.foto}} alt="" width="200px">
+      <p class="caption">{{perro.caption}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
