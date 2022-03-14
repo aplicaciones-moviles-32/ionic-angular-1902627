@@ -2,3 +2,12 @@ ion-grid {
   margin: auto;
   width: 90%;
 }
+
+div {
+  overflow: hidden;
+}
+
+img {
+  min-width: 30vw;
+  min-height: 30vw;
+}

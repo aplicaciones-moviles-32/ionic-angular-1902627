@@ -34,8 +34,32 @@ export class PublicacionesComponent implements OnInit {
         "imagen":"/assets/imagenes/shutter.png",
       },
       {
-        "id": "234d33",
+        "id": "ghjtr435",
         "imagen":"/assets/imagenes/steve.png",
+      },
+      {
+        "id": "mnmvgdfr3",
+        "imagen":"/assets/imagenes/carrusel.png",
+      },
+      {
+        "id": "2343fddfgr",
+        "imagen":"/assets/imagenes/bambi1.png",
+      },
+      {
+        "id": "hfghf5654",
+        "imagen":"/assets/imagenes/bambi2.png",
+      },
+      {
+        "id": "gfgd545",
+        "imagen":"/assets/imagenes/bambi3.png",
+      },
+      {
+        "id": "gdegd3432",
+        "imagen":"/assets/imagenes/bambi4.png",
+      },
+      {
+        "id": "gfhf4345",
+        "imagen":"/assets/imagenes/bambi5.png",
       },
   ]
 }
