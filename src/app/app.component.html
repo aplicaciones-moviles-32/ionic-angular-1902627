@@ -1,4 +1,13 @@
-<app-feed></app-feed>
-<!--
+<ion-content>
+  
+  <router-outlet></router-outlet>
+  <!--
+  <ion-button (click)="toglearvista()">
+    <span *ngIf="verperfil">Vista feed</span>
+    <span *ngIf="!verperfil">Vista perfil</span>
+  </ion-button>
 
--->
+  <app-feed *ngIf="!verperfil"></app-feed>
+  <app-perfil *ngIf="verperfil"></app-perfil>-->
+
+</ion-content>

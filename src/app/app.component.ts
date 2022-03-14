@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-basico-1902627';
-  total = 90;
-  esCierto = true;
+  verperfil = true
+
+  toglearvista(): void {
+    this.verperfil = !this.verperfil
+  }
 }

@@ -1,0 +1,69 @@
+<a routerLink="/feed">Feed</a>
+<ion-grid id="grid-datos">
+  <ion-row>
+    <strong id="nombre">{{usuario.nombre}}</strong>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <div>
+        <div id="fondo-foto">
+          <img [src]="usuario.foto" alt="" id="foto-perfil">
+        </div>
+      </div>
+    </ion-col>
+    <ion-col class="centrado">
+      <div class="centrado2">
+        <strong>{{usuario.Posts}}</strong>
+        <p>Posts</p>
+      </div>
+    </ion-col>
+    <ion-col class="centrado">
+      <div class="centrado2">
+        <strong>{{usuario.Followers}}</strong>
+        <p>Followers</p>
+      </div>
+    </ion-col>
+    <ion-col class="centrado">
+      <div class="centrado2">
+        <strong>{{usuario.Following}}</strong>
+        <p>Following</p>
+      </div>
+        
+    </ion-col>
+  </ion-row>
+  <ion-row id="nombre2">
+    <strong>{{usuario.nombre}}</strong>
+  </ion-row>
+  <ion-row id="descripcion">
+    {{usuario.descripcion}}
+  </ion-row>
+  <ion-row>
+    <div class="boton" *ngIf="!editando" (click)="togleditar()">
+      <div>Editar Perfil</div>
+    </div>
+  </ion-row>
+
+  <ion-row *ngIf="editando">
+    <ion-col>
+      <ion-row>
+        <ion-input [(ngModel)]="bio" placeholder="Nueva descripción"></ion-input>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="boton" *ngIf="editando" (click)="guardarbio()">
+            <div>Guardar</div>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="boton" *ngIf="editando" (click)="togleditar()">
+            <div>Cancelar</div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+<!--Publicaciones-->
+<app-publicaciones></app-publicaciones>
