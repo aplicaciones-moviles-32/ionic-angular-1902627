@@ -28,3 +28,8 @@ ion-icon {
   color: black;
   font-size: 6vw;
 }
+
+#caption {
+  font-size: 1rem;
+  color: black;
+}

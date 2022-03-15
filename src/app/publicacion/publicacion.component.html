@@ -4,10 +4,10 @@
     <ion-grid>
       <ion-row>
         <ion-col size="2">
-          <img src="assets/imagenes/Ruffles.png" alt="" id="foto-publicador">
+          <img [src]=resultado.fotoUsuario alt="" id="foto-publicador">
         </ion-col>
         <ion-col id="nombre">
-          <strong>Ruffles</strong>
+          <strong>{{resultado.usuario}}</strong>
         </ion-col>
         <ion-col size="1.5" id="menu-boton">
           <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
@@ -18,6 +18,11 @@
   <ion-card-content>
     <img [src]=resultado.imagen alt="" id="publicacion">
     <ion-grid>
+      <ion-row>
+        <ion-col id="caption">
+          {{resultado.caption}}
+        </ion-col>
+      </ion-row>
       <ion-row>
         <ion-col size="1.5">
           <ion-icon name="heart-outline"></ion-icon>

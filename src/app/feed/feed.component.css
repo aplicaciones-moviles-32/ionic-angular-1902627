@@ -1,16 +1,39 @@
+ion-card {
+  width: 90%;
+  margin: 0 auto;
+}
+
+ion-card-header {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .usuario {
-  color: gray;
-  font-size: 12px;
-  padding: 20px 10px;
+  font-size: 1rem;
+}
+
+ion-card-content {
+  text-align: center;
+}
+
+ion-card-content img {
+  width: 70%;
+  height: auto;
 }
 
 .caption {
-  color: darkgray;
-  font-size: 16px;
-  padding: 5px 10px;
+  font-size: 1rem;
+  text-align: left;
+  position: relative;
+  left: 15%;
+  color: black;
 }
 
 .card {
   border: solid 1px black;
   margin-top: 5px;
+}
+
+#fotoUsuario {
+  border-radius: 100%;
 }

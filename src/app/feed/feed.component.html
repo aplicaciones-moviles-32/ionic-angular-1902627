@@ -1,13 +1,24 @@
 
 <app-encabezado></app-encabezado>
 <ion-content>
-<ion-card *ngFor="let perro of perros">
+<ion-card *ngFor="let publicacion of publicaciones">
   <ion-card-header>
-    <p class="usuario">{{perro.nombre}}</p>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2">
+          <div id="contenedor-foto">
+            <img [src]=publicacion.fotoUsuario alt="" id="fotoUsuario">
+          </div>
+        </ion-col>
+        <ion-col>
+          <p class="usuario">{{publicacion.usuario}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-card-header>
   <ion-card-content>
-    <img src={{perro.foto}} alt="" width="200px">
-    <p class="caption">{{perro.caption}}</p>
+    <img src={{publicacion.imagen}} alt="" width="200px" [routerLink]="['/publicacion', publicacion.id]">
+    <p class="caption">{{publicacion.caption}}</p>
   </ion-card-content>
 </ion-card>
 </ion-content>

@@ -10,21 +10,28 @@ export class FeedComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  perros = [
+
+  publicaciones = [
     {
-      "nombre": "@PerroLoco",
-      "foto": "/assets/imagenes/perro1.jpg",
-      "caption": "Hola a todos"
-    },
-    {
-      "nombre": "@José",
-      "foto": "/assets/imagenes/perro2.jpg",
-      "caption": "Bonito día"
-    },
-    {
-      "nombre": "@Manuel",
-      "foto": "/assets/imagenes/perro1.jpg",
-      "caption": "Otra foto"
-    }
+        "usuario": "@PerroLoco",
+        "fotoUsuario": "/assets/imagenes/perro1.jpg",
+        "id": "uiasdbiwa",
+        "imagen": "/assets/imagenes/perro1.jpg",
+        "caption": "Hola a todos"
+      },
+      {
+        "usuario": "@Jose",
+        "fotoUsuario": "/assets/imagenes/perro2.jpg",
+        "id": "uhiadwb324",
+        "imagen": "/assets/imagenes/perro2.jpg",
+        "caption": "Bonito día"
+      },
+      {
+        "usuario": "@Manuel",
+        "fotoUsuario": "/assets/imagenes/perro1.jpg",
+        "id": "ioefwbnoasd",
+        "imagen": "/assets/imagenes/perro1.jpg",
+        "caption": "Otra foto"
+      }
   ]
 }
