@@ -1,4 +1,6 @@
-<a routerLink="/perfil">Perfil</a>
+
+<app-encabezado></app-encabezado>
+<ion-content>
 <ion-card *ngFor="let perro of perros">
   <ion-card-header>
     <p class="usuario">{{perro.nombre}}</p>
@@ -8,3 +10,4 @@
     <p class="caption">{{perro.caption}}</p>
   </ion-card-content>
 </ion-card>
+</ion-content>

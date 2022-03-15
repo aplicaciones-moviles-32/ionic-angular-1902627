@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EncabezadoComponent } from './encabezado/encabezado.component';
+import { PublicacionComponent } from './publicacion/publicacion.component';
 import { FeedComponent } from './feed/feed.component';
 import { IonicModule } from '@ionic/angular';
 import { PerfilComponent } from './perfil/perfil.component';
@@ -16,7 +18,9 @@ import { RoutesModule } from './routes.module';
     AppComponent,
     FeedComponent,
     PerfilComponent,
-    PublicacionesComponent
+    PublicacionesComponent,
+    EncabezadoComponent,
+    PublicacionComponent
   ],
   imports: [
     BrowserModule,

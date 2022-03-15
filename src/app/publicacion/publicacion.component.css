@@ -1,0 +1,30 @@
+#publicacion {
+  width: 100%;
+  height: auto;
+}
+
+#foto-publicador {
+  border-radius: 100%;
+  width: 100%;
+  height: auto;
+}
+
+#nombre {
+  color: black;
+  font-size: 1.3rem;
+  display: flex;
+}
+
+#nombre strong {
+  margin: auto 0;
+}
+
+#menu-boton {
+  display: flex;
+}
+
+ion-icon {
+  margin: auto 0;
+  color: black;
+  font-size: 6vw;
+}

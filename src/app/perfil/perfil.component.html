@@ -1,11 +1,13 @@
-<a routerLink="/feed">Feed</a>
+<app-encabezado></app-encabezado>
+
+<ion-content>
 <ion-grid id="grid-datos">
   <ion-row>
     <strong id="nombre">{{usuario.nombre}}</strong>
   </ion-row>
   <ion-row>
     <ion-col>
-      <div>
+      <div id="foto-entera">
         <div id="fondo-foto">
           <img [src]="usuario.foto" alt="" id="foto-perfil">
         </div>
@@ -67,3 +69,4 @@
 
 <!--Publicaciones-->
 <app-publicaciones></app-publicaciones>
+</ion-content>

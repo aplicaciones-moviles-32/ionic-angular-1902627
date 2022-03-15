@@ -1,16 +1,12 @@
-<ion-content>
-  <ion-header slot="fixed">
-    <ion-toolbar><strong>Hola, Instagram</strong></ion-toolbar>
-  </ion-header>
-  <ion-toolbar></ion-toolbar>
-  <router-outlet></router-outlet>
-  <!--
-  <ion-button (click)="toglearvista()">
-    <span *ngIf="verperfil">Vista feed</span>
-    <span *ngIf="!verperfil">Vista perfil</span>
-  </ion-button>
-
-  <app-feed *ngIf="!verperfil"></app-feed>
-  <app-perfil *ngIf="verperfil"></app-perfil>-->
-
-</ion-content>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button routerLink="/feed">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Inicio</ion-label>
+    </ion-tab-button>
+    <ion-tab-button routerLink="/perfil">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <ion-label>Perfil</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
