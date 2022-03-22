@@ -5,19 +5,19 @@
   <ion-card-header>
     <ion-grid>
       <ion-row>
-        <ion-col size="2">
+        <ion-col size="3">
           <div id="contenedor-foto">
             <img [src]=publicacion.fotoUsuario alt="" id="fotoUsuario">
           </div>
         </ion-col>
-        <ion-col>
+        <ion-col class="cont-usuario">
           <p class="usuario">{{publicacion.usuario}}</p>
         </ion-col>
       </ion-row>
     </ion-grid>
   </ion-card-header>
   <ion-card-content>
-    <img src={{publicacion.imagen}} alt="" width="200px" [routerLink]="['/publicacion', publicacion.id]">
+    <img src={{publicacion.imagen}} alt="" [routerLink]="['/publicacion', publicacion.id]">
     <p class="caption">{{publicacion.caption}}</p>
   </ion-card-content>
 </ion-card>

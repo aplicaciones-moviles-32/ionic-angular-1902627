@@ -8,19 +8,20 @@ ion-card-header {
   margin: 0 auto;
 }
 
-.usuario {
-  font-size: 1rem;
-}
-
 ion-card-content {
   text-align: center;
 }
-
+/*Estilo de la imagen*/
 ion-card-content img {
   width: 70%;
   height: auto;
 }
 
+ion-card-content img:hover {
+  cursor: pointer;
+}
+
+/*Estilo Descripcion*/
 .caption {
   font-size: 1rem;
   text-align: left;
@@ -29,11 +30,29 @@ ion-card-content img {
   color: black;
 }
 
-.card {
-  border: solid 1px black;
-  margin-top: 5px;
+/*Estilo foto de usuario*/
+
+#contenedor-foto {
+  display: flex;
 }
 
 #fotoUsuario {
+  margin: auto auto;
+  width: 10vw;
+  height: 10vw;
   border-radius: 100%;
+  object-fit: cover;
+}
+
+/*Estilo Nombre de usuario*/
+
+.cont-usuario {
+  display: flex;
+}
+
+.usuario {
+  color: black;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: auto 0;
 }
