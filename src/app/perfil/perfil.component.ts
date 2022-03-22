@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { BdatosService } from '../bdatos.service';
+
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
@@ -7,18 +10,19 @@ import { Input } from '@angular/core';
 })
 export class PerfilComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient, private bd: BdatosService) { }
 
   ngOnInit(): void {
+    this.getUsuario()
   }
 
-  usuario = {
-    "nombre": "Ruffles",
-    "foto": "/assets/imagenes/Ruffles.png",
-    "Followers": 543,
-    "Following": 23,
-    "Posts": 4,
-    "descripcion": "Me llamo Ruffles" 
+  getUsuario(): void{
+    this.bd.getUsuario().subscribe(res => {
+      this.usuario = res
+    })
+  }
+
+  usuario: any = {
   }
 
   @Input() bio: string = ""

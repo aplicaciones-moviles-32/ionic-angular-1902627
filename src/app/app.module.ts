@@ -11,6 +11,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { PublicacionesComponent } from './publicaciones/publicaciones.component';
 import { FormsModule } from '@angular/forms';
 import { RoutesModule } from './routes.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { RoutesModule } from './routes.module';
     FormsModule,
     AppRoutingModule,
     IonicModule.forRoot(),
-    RoutesModule
+    RoutesModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

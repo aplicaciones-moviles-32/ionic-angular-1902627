@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { BdatosService } from '../bdatos.service';
+
+
 @Component({
   selector: 'app-feed',
   templateUrl: './feed.component.html',
@@ -6,32 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient, private db: BdatosService) { }
 
   ngOnInit(): void {
+    this.db.getFeed().subscribe(res => {this.publicaciones = res})
   }
 
-  publicaciones = [
-    {
-        "usuario": "@PerroLoco",
-        "fotoUsuario": "/assets/imagenes/perro1.jpg",
-        "id": "uiasdbiwa",
-        "imagen": "/assets/imagenes/perro1.jpg",
-        "caption": "Hola a todos"
-      },
-      {
-        "usuario": "@Jose",
-        "fotoUsuario": "/assets/imagenes/perro2.jpg",
-        "id": "uhiadwb324",
-        "imagen": "/assets/imagenes/perro2.jpg",
-        "caption": "Bonito día"
-      },
-      {
-        "usuario": "@Manuel",
-        "fotoUsuario": "/assets/imagenes/perro1.jpg",
-        "id": "ioefwbnoasd",
-        "imagen": "/assets/imagenes/perro1.jpg",
-        "caption": "Otra foto"
-      }
-  ]
+  publicaciones: any
 }
