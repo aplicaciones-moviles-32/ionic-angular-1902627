@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { BdatosService, Publidetalle} from '../bdatos.service'
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-publicacion',
@@ -131,7 +133,7 @@ export class PublicacionComponent implements OnInit {
   }
 
   resultado = this.obtenerPublicacion(this.publicacionid)
-
+  
   
   ngOnInit(): void {
   }
