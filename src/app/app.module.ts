@@ -9,8 +9,13 @@ import { FeedComponent } from './feed/feed.component';
 import { IonicModule } from '@ionic/angular';
 import { PerfilComponent } from './perfil/perfil.component';
 import { PublicacionesComponent } from './publicaciones/publicaciones.component';
+import { PublicacionBaseComponent } from './publicacion-base/publicacion-base.component';
+import { PopoverComponent } from './popover/popover.component';
+import { HistoriasComponent } from './historias/historias.component';
 import { FormsModule } from '@angular/forms';
 import { RoutesModule } from './routes.module';
+import { PopoverPerfilComponent } from './popover-perfil/popover-perfil.component';
+import { NuevaPublicacionFormComponent } from './nueva-publicacion-form/nueva-publicacion-form.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -22,7 +27,12 @@ import { HttpClientModule } from '@angular/common/http';
     PerfilComponent,
     PublicacionesComponent,
     EncabezadoComponent,
-    PublicacionComponent
+    PublicacionComponent,
+    PublicacionBaseComponent,
+    PopoverPerfilComponent,
+    PopoverComponent,
+    HistoriasComponent,
+    NuevaPublicacionFormComponent
   ],
   imports: [
     BrowserModule,

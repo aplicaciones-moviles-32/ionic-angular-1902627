@@ -1,0 +1,44 @@
+<ion-card>
+  <ion-card-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2">
+          <img [src]=publicacion.fotoUsuario alt="" id="foto-publicador">
+        </ion-col>
+        <ion-col id="nombre">
+          <strong>{{publicacion.usuario}}</strong>
+        </ion-col>
+        <ion-col size="1.5" id="menu-boton">
+          <ion-icon name="ellipsis-horizontal-outline" (click)="presentPopover($event)"></ion-icon>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-header>
+  <ion-card-content>
+    <img [src]=publicacion.imagen alt="" id="publicacion" [routerLink]="['/publicacion', publicacion.id]">
+    <ion-grid>
+      <ion-row>
+        <ion-col id="caption">
+          {{publicacion.caption}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="1.5">
+          <ion-icon name="heart-outline"></ion-icon>
+        </ion-col>
+        <ion-col size="1.5">
+          <ion-icon name="chatbubble-outline"></ion-icon>
+        </ion-col>
+        <ion-col size="1.5">
+          <ion-icon name="paper-plane-outline"></ion-icon>
+        </ion-col>
+        <ion-col>
+        </ion-col>
+        <ion-col size="1.5">
+          <ion-icon name="bookmark-outline"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>
