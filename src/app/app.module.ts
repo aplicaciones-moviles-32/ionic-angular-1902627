@@ -12,9 +12,6 @@ import { PublicacionesComponent } from './publicaciones/publicaciones.component'
 import { FormsModule } from '@angular/forms';
 import { RoutesModule } from './routes.module';
 import { HttpClientModule } from '@angular/common/http';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { environment } from '../environments/environment';
 
 
 
@@ -34,8 +31,6 @@ import { environment } from '../environments/environment';
     IonicModule.forRoot(),
     RoutesModule,
     HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
