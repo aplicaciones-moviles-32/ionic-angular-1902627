@@ -14,7 +14,7 @@ export class EncabezadoComponent implements OnInit {
   usuario: any
   foto:any
   ngOnInit(): void {
-    this.dbase.getUsuario().subscribe(res=> {
+    this.dbase.getUsuario(this.dbase.usuario_act).subscribe(res=> {
       this.usuario = res
       this.foto = this.usuario.foto
     })

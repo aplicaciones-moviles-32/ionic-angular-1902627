@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
+import { publicacion } from '../interfaces'
+import { BdatosService } from '../bdatos.service'
+
+interface keyval_pub {
+  [key: string]: publicacion
+}
 
 @Component({
   selector: 'app-publicaciones',
@@ -8,11 +14,18 @@ import { Input } from '@angular/core';
 })
 export class PublicacionesComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private db: BdatosService) { }
 
   ngOnInit(): void {
   }
 
-  @Input() publicaciones: any 
+  @Input() set publirefs(publicaciones: any) {
+    for(let key in publicaciones) {
+      this.db.getPublicacionDetalle(publicaciones[key]).subscribe(res=>{
+        this._publirefs[publicaciones[key]] = res
+      })
+    }
+  }
+
+  _publirefs: keyval_pub = {}
 }

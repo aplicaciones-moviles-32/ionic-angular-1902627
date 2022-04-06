@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { PopoverComponent } from '../popover/popover.component';
+import { pubCompleta } from '../interfaces';
 
 @Component({
   selector: 'app-publicacion-base',
@@ -13,8 +14,8 @@ export class PublicacionBaseComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  @Input() publicacion = {"caption":"Publicacion","fotoUsuario":"","id":"0","imagen":"","usuario":""}
+  @Input() id = ""
+  @Input() publicacion: pubCompleta = {"caption":"Publicacion","fotoUsuario":"","imagen":"","usuario":""}
   @Input() redireccionar: boolean = false
 
   async presentPopover(ev: any) {

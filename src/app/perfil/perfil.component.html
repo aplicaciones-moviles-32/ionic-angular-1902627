@@ -9,7 +9,9 @@
     <ion-col>
       <div id="foto-entera">
         <div id="fondo-foto">
-          <img [src]="usuario.foto" alt="" id="foto-perfil">
+          <ion-avatar>
+            <img [src]="usuario.foto" alt="" id="foto-perfil">
+          </ion-avatar>
         </div>
       </div>
     </ion-col>
@@ -68,5 +70,5 @@
 
 
 <!--Publicaciones-->
-<app-publicaciones [publicaciones]="usuario.publicacionesperfil"></app-publicaciones>
+<app-publicaciones [publirefs]="usuario.publicaciones"></app-publicaciones>
 </ion-content>

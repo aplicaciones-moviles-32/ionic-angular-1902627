@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BdatosService } from '../bdatos.service';
+import { publicacion } from '../interfaces';
 
 @Component({
   selector: 'app-perfil',
@@ -17,7 +18,7 @@ export class PerfilComponent implements OnInit {
   }
 
   getUsuario(): void{
-    this.bd.getUsuario().subscribe(res => {
+    this.bd.getUsuario(this.bd.usuario_act).subscribe(res => {
       this.usuario = res
     })
   }
