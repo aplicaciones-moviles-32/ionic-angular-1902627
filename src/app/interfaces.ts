@@ -5,6 +5,7 @@ export interface publicacion {
 }
 
 export interface pubCompleta extends publicacion {
+  id: string;
   "fotoUsuario": string
 }
 

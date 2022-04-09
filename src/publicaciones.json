@@ -1,0 +1,77 @@
+[
+  {
+    "usuario": "0",
+    "imagen":"/assets/imagenes/jose.png",
+    "caption": "Esta es una foto"
+  },
+  {
+    "usuario": "0",
+    "imagen":"/assets/imagenes/jesus.png",
+    "caption": "Esta es una foto"
+  },
+  {
+    "usuario": "0",
+    "imagen":"/assets/imagenes/morgan.png",
+    "caption": "Esta es una foto"
+  },
+  {
+    "usuario": "0",
+    "imagen":"/assets/imagenes/raul.png",
+    "caption": "Esta es una foto"
+  },
+  {
+    "usuario": "0",
+    "imagen":"/assets/imagenes/shutter.png",
+    "caption": "Esta es una foto"
+  },
+  {
+    "usuario": "0",
+    "imagen":"/assets/imagenes/steve.png",
+    "caption": "Esta es una foto"
+  },
+  {
+    "usuario": "0",
+    "imagen":"/assets/imagenes/carrusel.png",
+    "caption": "Esta es una foto"
+  },
+  {
+    "usuario": "0",
+    "imagen":"/assets/imagenes/bambi1.png",
+    "caption": "Esta es una foto"
+  },
+  {
+    "usuario": "0",
+    "imagen":"/assets/imagenes/bambi2.png",
+    "caption": "Esta es una foto"
+  },
+  {
+    "usuario": "0",
+    "imagen":"/assets/imagenes/bambi3.png",
+    "caption": "Esta es una foto"
+  },
+  {
+    "usuario": "0",
+    "imagen":"/assets/imagenes/bambi4.png",
+    "caption": "Esta es una foto"
+  },
+  {
+    "usuario": "0",
+    "imagen":"/assets/imagenes/bambi5.png",
+    "caption": "Esta es una foto"
+  },
+  {
+    "usuario": "-Mzx1W5gWmH3RqXW_4KL",
+    "imagen":"/assets/imagenes/perro1.jpg",
+    "caption": "Bonito día"
+  },
+  {
+    "usuario": "-Mzx0HGwGUV2XZ32SsjD",
+    "imagen":"/assets/imagenes/perro2.jpg",
+    "caption": "Esta es mi foto"
+  },
+  {
+    "usuario": "-Mzx1W5gWmH3RqXW_4KL",
+    "imagen":"/assets/imagenes/perro1.jpg",
+    "caption": "Otra foto"
+  }
+]

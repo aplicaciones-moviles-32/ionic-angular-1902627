@@ -8,15 +8,17 @@
         <ion-col id="nombre">
           <strong>{{publicacion.usuario}}</strong>
         </ion-col>
+        <ion-col size="1.5" id="eliminar-boton">
+          <ion-icon name="trash-outline" (click)="eliminar_pub()" class="icon-destruct"></ion-icon>
+        </ion-col>
         <ion-col size="1.5" id="menu-boton">
           <ion-icon name="ellipsis-horizontal-outline" (click)="presentPopover($event)"></ion-icon>
-
         </ion-col>
       </ion-row>
     </ion-grid>
   </ion-card-header>
   <ion-card-content>
-    <img [src]=publicacion.imagen alt="" id="publicacion" [routerLink]="['/publicacion', id]">
+    <img [src]=publicacion.imagen alt="" id="publicacion" [routerLink]="['/publicacion', publicacion.id]">
     <ion-grid>
       <ion-row>
         <ion-col id="caption">

@@ -22,7 +22,9 @@ export class PublicacionesComponent implements OnInit {
   @Input() set publirefs(publicaciones: any) {
     for(let key in publicaciones) {
       this.db.getPublicacionDetalle(publicaciones[key]).subscribe(res=>{
-        this._publirefs[publicaciones[key]] = res
+        if(res!=null) {
+          this._publirefs[publicaciones[key]] = res
+        }
       })
     }
   }

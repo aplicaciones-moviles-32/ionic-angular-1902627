@@ -10,7 +10,7 @@ import { BdatosService } from '../bdatos.service'
 export class PublicacionComponent implements OnInit {
 
   publicacionid = this.ruta.snapshot.params["id"]
-  resultado: any = {"caption":"Publicacion","fotoUsuario":"","id":"0","imagen":"","usuario":""}
+  resultado: any = {"caption":"Publicacion","fotoUsuario":"","id":"","imagen":"","usuario":""}
 
   constructor(private ruta: ActivatedRoute, private bd: BdatosService) { }
 
@@ -22,6 +22,7 @@ export class PublicacionComponent implements OnInit {
     this.bd.getPublicacionDetalle(this.publicacionid).subscribe(res=> {
       //Obtiene foto de perfil y nombre de publicador
       this.resultado = res
+      this.resultado.id = this.publicacionid
       this.bd.getUsuario(res.usuario).subscribe(publicador => {
         this.resultado.fotoUsuario = publicador.foto
         this.resultado.usuario = publicador.nombre

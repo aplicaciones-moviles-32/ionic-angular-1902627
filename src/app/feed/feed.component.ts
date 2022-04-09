@@ -18,13 +18,15 @@ export class FeedComponent implements OnInit {
       for(let id in res) {
         //Obtiene la publicacion y la pone en publicaciones
         this.db.getPublicacionDetalle(res[id]).subscribe(pub=> {
-          var nuevapub: pubCompleta = {"caption": pub.caption, "fotoUsuario": "", "imagen": pub.imagen, "usuario": pub.usuario}
-          //Obtiene foto de perfil y nombre de publicador
-          this.db.getUsuario(pub.usuario).subscribe(publicador => {
-            nuevapub.fotoUsuario = publicador.foto
-            nuevapub.usuario = publicador.nombre
-          })
-          this.publicaciones[res[id]] = nuevapub
+          if(pub != null) {
+            var nuevapub: pubCompleta = {"caption": pub.caption, "fotoUsuario": "", "imagen": pub.imagen,   "usuario": pub.usuario, "id": res[id]}
+            //Obtiene foto de perfil y nombre de publicador
+            this.db.getUsuario(pub.usuario).subscribe(publicador => {
+              nuevapub.fotoUsuario = publicador.foto
+              nuevapub.usuario = publicador.nombre
+            })
+            this.publicaciones[res[id]] = nuevapub
+          }
         })
       }
     })

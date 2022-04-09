@@ -29,6 +29,14 @@ ion-card {
   display: flex;
 }
 
+#eliminar-boton {
+  display: flex;
+}
+
+.icon-destruct {
+  color:crimson;
+}
+
 ion-icon {
   margin: auto 0;
   color: black;
@@ -43,6 +51,10 @@ ion-icon {
 ion-icon:hover {
   cursor: pointer;
   color: #4c8dff;
+}
+
+.icon-destruct:hover {
+  color: black;
 }
 
 img:hover {

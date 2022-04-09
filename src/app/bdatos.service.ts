@@ -33,4 +33,12 @@ export class BdatosService {
         this.http.post('https://apps-mob-insta-default-rtdb.firebaseio.com/usuario/0/publicaciones.json', JSON.stringify(res.name)).subscribe()
       })
   }
+
+  //DELETE
+  eliminaPublicacion(idpub: string) {
+    console.log(idpub)
+    if(idpub.length > 0) {
+      this.http.delete('https://apps-mob-insta-default-rtdb.firebaseio.com/TodasPublicaciones/'+ idpub + '.json').subscribe()
+    }
+  }
 }

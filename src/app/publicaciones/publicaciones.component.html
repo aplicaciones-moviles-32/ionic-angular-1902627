@@ -1,7 +1,7 @@
 <ion-grid>
   <ion-row>
     <ion-col *ngFor="let publicacion of _publirefs|keyvalue" size="4" class="publicaciones">
-      <div>
+      <div *ngIf="publicacion.value">
         <img [src]=publicacion.value.imagen alt="" [routerLink]="['/publicacion', publicacion.key]">
       </div>
     </ion-col>

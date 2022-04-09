@@ -2,6 +2,6 @@
 <app-encabezado></app-encabezado>
 <ion-content>
   <app-historias></app-historias>
-  <app-publicacion-base *ngFor="let publicacion of publicaciones|keyvalue" [publicacion]=publicacion.value [id]=publicacion.key [redireccionar]="true"></app-publicacion-base>
+  <app-publicacion-base *ngFor="let publicacion of publicaciones|keyvalue" [publicacion]=publicacion.value [id]=publicacion.key></app-publicacion-base>
   
 </ion-content>
