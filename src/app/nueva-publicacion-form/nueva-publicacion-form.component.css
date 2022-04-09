@@ -1,0 +1,9 @@
+
+ion-col {
+  display: flex;
+  align-items: center;
+}
+
+ion-grid {
+  width: 50vw;
+}
