@@ -25,9 +25,9 @@ export class BdatosService {
 
   //POST
   postPublicacion(post:publicacion) {
-    post.usuario = this.usuario_act
+    var recortada: publicacion = {'caption': post.caption, 'imagen': post.imagen, 'usuario': this.usuario_act}
     //Lo agrega a publicaciones
-    this.http.post<respuestaPost>('https://apps-mob-insta-default-rtdb.firebaseio.com/TodasPublicaciones.json', post)
+    this.http.post<respuestaPost>('https://apps-mob-insta-default-rtdb.firebaseio.com/TodasPublicaciones.json', recortada)
       .subscribe(res=> {
         //Lo agrega al perfil
         this.http.post('https://apps-mob-insta-default-rtdb.firebaseio.com/usuario/0/publicaciones.json', JSON.stringify(res.name)).subscribe()
@@ -40,5 +40,11 @@ export class BdatosService {
     if(idpub.length > 0) {
       this.http.delete('https://apps-mob-insta-default-rtdb.firebaseio.com/TodasPublicaciones/'+ idpub + '.json').subscribe()
     }
+  }
+
+  //PUT
+  updatePublicacion(idpub: string, pub: publicacion) {
+    this.http.put('https://apps-mob-insta-default-rtdb.firebaseio.com/TodasPublicaciones/'+ idpub + '/caption.json', JSON.stringify(pub.caption)).subscribe(res =>{
+    })
   }
 }

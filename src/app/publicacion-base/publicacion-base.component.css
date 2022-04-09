@@ -33,6 +33,26 @@ ion-card {
   display: flex;
 }
 
+#editar-boton {
+  display: flex;
+}
+/*Botón guardar desc*/
+.boton {
+  margin: auto;
+  display: block;
+  width: 100%;
+  border: 1px #cbcbcb solid;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.boton div {
+  padding: 0.5rem;
+  font-weight: 700;
+}
+/*----*/
 .icon-destruct {
   color:crimson;
 }

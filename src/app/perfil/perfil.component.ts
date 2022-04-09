@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BdatosService } from '../bdatos.service';
-import { publicacion } from '../interfaces';
 
 @Component({
   selector: 'app-perfil',

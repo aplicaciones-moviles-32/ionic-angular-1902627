@@ -15,9 +15,18 @@ export class PublicacionBaseComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  //Variables
+  publVar: pubCompleta = {"caption":"Publicacion","fotoUsuario":"","imagen":"","usuario":"", "id":""}
+  editando: boolean = false
+  @Input() nuevaDesc: string = ""
+  @Input() set publicacion(entrada: pubCompleta) {
+    this.publVar = entrada
+    this.nuevaDesc = entrada.caption
+  }
 
-  @Input() publicacion: pubCompleta = {"caption":"Publicacion","fotoUsuario":"","imagen":"","usuario":"", "id":""}
 
+  //Funciones
+  //Popover
   async presentPopover(ev: any) {
     const popover = await this.pop.create({
       component: PopoverComponent,
@@ -31,6 +40,18 @@ export class PublicacionBaseComponent implements OnInit {
   }
 
   eliminar_pub() {
-    this.db.eliminaPublicacion(this.publicacion.id)
+    this.db.eliminaPublicacion(this.publVar.id)
+  }
+
+  toglear() {
+    this.editando = !this.editando
+  }
+
+  guardar() {
+    this.publVar.caption = this.nuevaDesc
+    console.log(this.nuevaDesc)
+    this.db.updatePublicacion(this.publVar.id, this.publVar)
+    this.toglear()
+
   }
 }

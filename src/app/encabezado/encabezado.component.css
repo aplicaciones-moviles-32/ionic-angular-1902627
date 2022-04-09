@@ -1,6 +1,7 @@
 img {
   width: 3rem;
   height: 3rem;
+  border: black solid 2px;
 }
 
 ion-col {

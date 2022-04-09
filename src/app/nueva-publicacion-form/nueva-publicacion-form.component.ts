@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { publicacion } from '../interfaces';
+import { BdatosService } from '../bdatos.service';
 
 @Component({
   selector: 'app-nueva-publicacion-form',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NuevaPublicacionFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private db: BdatosService) { }
 
   ngOnInit(): void {
+  }
+  
+  publicacionNueva: publicacion = {
+    'caption': "Probando",
+    'imagen': "https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y",
+    'usuario': "test"
+  }
+
+  publicar() {
+    this.db.postPublicacion(this.publicacionNueva)
   }
 
 }
