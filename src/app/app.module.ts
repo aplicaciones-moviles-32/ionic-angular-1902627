@@ -17,8 +17,17 @@ import { RoutesModule } from './routes.module';
 import { PopoverPerfilComponent } from './popover-perfil/popover-perfil.component';
 import { NuevaPublicacionFormComponent } from './nueva-publicacion-form/nueva-publicacion-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire/compat'
 
-
+export const firebaseConfig = {
+  apiKey: "AIzaSyCaZcnNEidWVGMpA0REXHaq6Kji9ZpQPwo",
+  authDomain: "apps-mob-insta.firebaseapp.com",
+  databaseURL: "https://apps-mob-insta-default-rtdb.firebaseio.com",
+  projectId: "apps-mob-insta",
+  storageBucket: "apps-mob-insta.appspot.com",
+  messagingSenderId: "213366764876",
+  appId: "1:213366764876:web:9f2827c49d9faaf6864be9"
+};
 
 @NgModule({
   declarations: [
@@ -41,6 +50,7 @@ import { HttpClientModule } from '@angular/common/http';
     IonicModule.forRoot(),
     RoutesModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
