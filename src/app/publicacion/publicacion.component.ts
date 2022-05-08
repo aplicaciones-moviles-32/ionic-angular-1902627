@@ -20,11 +20,16 @@ export class PublicacionComponent implements OnInit {
 
   getPublicacion(): void {
     this.bd.getPublicacionDetalle(this.publicacionid).subscribe(res=> {
-      //Obtiene foto de perfil y nombre de publicador
+      //Obtiene foto de perfil, foto, y nombre de publicador
       this.resultado = res
+      this.bd.getImagen(res.imagen).subscribe(img => {
+        this.resultado.imagen = img
+      })
       this.resultado.id = this.publicacionid
       this.bd.getUsuario(res.usuario).subscribe(publicador => {
-        this.resultado.fotoUsuario = publicador.foto
+        this.bd.getImagen(publicador.foto).subscribe( imge =>{
+          this.resultado.fotoUsuario = imge
+        })
         this.resultado.usuario = publicador.nombre
       })
     })

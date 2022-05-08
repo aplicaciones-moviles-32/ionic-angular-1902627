@@ -3,6 +3,7 @@ import { publicacion } from '../interfaces';
 import { BdatosService } from '../bdatos.service';
 import { NgForm } from '@angular/forms';
 
+
 @Component({
   selector: 'app-nueva-publicacion-form',
   templateUrl: './nueva-publicacion-form.component.html',
@@ -10,7 +11,7 @@ import { NgForm } from '@angular/forms';
 })
 export class NuevaPublicacionFormComponent implements OnInit {
 
-  constructor(private db: BdatosService) { }
+  constructor(private db: BdatosService, ) { }
 
   ngOnInit(): void {
   }
@@ -21,8 +22,18 @@ export class NuevaPublicacionFormComponent implements OnInit {
     'usuario': "test"
   }
 
+  Imagen: File|null = null
+  nombreImagen: string = ""
+
   onSubmit(datos: NgForm) {
-    this.db.postPublicacion(this.pub)
+    this.db.postPublicacion(this.pub, this.Imagen!)
   }
 
+
+  cambioArchivo(event: any) {
+    this.Imagen = event.target.files[0]
+    if (this.Imagen) {
+      this.nombreImagen = this.Imagen.name
+    }
+  }
 }

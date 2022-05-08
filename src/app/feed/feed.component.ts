@@ -22,8 +22,14 @@ export class FeedComponent implements OnInit {
             var nuevapub: pubCompleta = {"caption": pub.caption, "fotoUsuario": "", "imagen": pub.imagen,   "usuario": pub.usuario, "id": res[id]}
             //Obtiene foto de perfil y nombre de publicador
             this.db.getUsuario(pub.usuario).subscribe(publicador => {
-              nuevapub.fotoUsuario = publicador.foto
+              this.db.getImagen(publicador.foto).subscribe(pfp=>{
+                nuevapub.fotoUsuario = pfp
+              })
               nuevapub.usuario = publicador.nombre
+            })
+            //obtiene foto de la publicacion
+            this.db.getImagen(pub.imagen).subscribe(imge =>{
+              nuevapub.imagen = imge
             })
             this.publicaciones[res[id]] = nuevapub
           }

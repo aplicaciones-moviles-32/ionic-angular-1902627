@@ -21,9 +21,14 @@ export class PublicacionesComponent implements OnInit {
 
   @Input() set publirefs(publicaciones: any) {
     for(let key in publicaciones) {
+      //Obtiene datos de la publicacion
       this.db.getPublicacionDetalle(publicaciones[key]).subscribe(res=>{
         if(res!=null) {
-          this._publirefs[publicaciones[key]] = res
+          this.db.getImagen(res.imagen).subscribe(imge =>{
+            //Obtiene url imagen
+            res.imagen = imge
+            //agrega a publicaciones
+            this._publirefs[publicaciones[key]] = res})
         }
       })
     }

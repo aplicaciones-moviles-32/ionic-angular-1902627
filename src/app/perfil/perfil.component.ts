@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BdatosService } from '../bdatos.service';
-
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
@@ -19,6 +18,9 @@ export class PerfilComponent implements OnInit {
   getUsuario(): void{
     this.bd.getUsuario(this.bd.usuario_act).subscribe(res => {
       this.usuario = res
+      this.bd.getImagen(res.foto).subscribe(imge => {
+        this.usuario.foto = imge
+      })
     })
   }
 
@@ -34,6 +36,7 @@ export class PerfilComponent implements OnInit {
   }
 
   togleditar(): void {
+    
     this.editando = !this.editando
     this.bio = ""
   }

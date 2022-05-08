@@ -18,6 +18,7 @@ import { PopoverPerfilComponent } from './popover-perfil/popover-perfil.componen
 import { NuevaPublicacionFormComponent } from './nueva-publicacion-form/nueva-publicacion-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire/compat'
+import { AngularFireStorageModule } from '@angular/fire/compat/storage'
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCaZcnNEidWVGMpA0REXHaq6Kji9ZpQPwo",
@@ -50,7 +51,8 @@ export const firebaseConfig = {
     IonicModule.forRoot(),
     RoutesModule,
     HttpClientModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

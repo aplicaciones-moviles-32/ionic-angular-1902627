@@ -16,7 +16,9 @@ export class EncabezadoComponent implements OnInit {
   ngOnInit(): void {
     this.dbase.getUsuario(this.dbase.usuario_act).subscribe(res=> {
       this.usuario = res
-      this.foto = this.usuario.foto
+      this.dbase.getImagen(res.foto).subscribe( imge =>{
+        this.foto = imge
+      })
     })
   }
   async presentPopover(ev: any) {
