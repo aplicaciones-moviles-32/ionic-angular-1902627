@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BdatosService } from '../bdatos.service';
+
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
@@ -40,4 +41,14 @@ export class PerfilComponent implements OnInit {
     this.editando = !this.editando
     this.bio = ""
   }
+
+  doRefresh(event: Event) {
+    this.getUsuario();
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      const targ = event.target as HTMLIonRefresherElement;
+      targ.complete();
+    }, 1000);
+  }
 }
+

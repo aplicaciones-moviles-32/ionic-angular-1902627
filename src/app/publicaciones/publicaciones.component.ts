@@ -20,6 +20,7 @@ export class PublicacionesComponent implements OnInit {
   }
 
   @Input() set publirefs(publicaciones: any) {
+    this._publirefs = {};
     for(let key in publicaciones) {
       //Obtiene datos de la publicacion
       this.db.getPublicacionDetalle(publicaciones[key]).subscribe(res=>{
