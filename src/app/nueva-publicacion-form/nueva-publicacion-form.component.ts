@@ -34,8 +34,8 @@ export class NuevaPublicacionFormComponent implements OnInit {
     const capturedPhoto = await Camera.getPhoto({
       resultType: CameraResultType.Uri,
       source: CameraSource.Camera,
-      quality: 50,
-      width: 200
+      quality: 80,
+      width: 480
     });
     this.Imagencap = capturedPhoto;
     console.log(this.Imagencap.webPath);
