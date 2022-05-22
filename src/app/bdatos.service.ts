@@ -4,7 +4,6 @@ import { publicacion, respuestaPost, usuario, RefsPublicaciones } from './interf
 import { AngularFireStorage, AngularFireStorageReference } from '@angular/fire/compat/storage';
 import {v4 as uuidv4} from 'uuid';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -33,12 +32,13 @@ export class BdatosService {
   }
 
   //POST
-  postPublicacion(post:publicacion, foto: Blob) {
+  async postPublicacion(post:publicacion, foto: string) {
     var recortada: publicacion = {'caption': post.caption, 'imagen': post.imagen, 'usuario': this.usuario_act}
-
+    //Convierte foto a blob
+    let blob = await fetch(foto).then(r => r.blob());
     //Subir foto
     var path: string = 'publicaciones/' + this.uuid()//id unico
-    this.store.upload(path,foto)
+    this.store.upload(path,blob)
     //Guarda url de foto en recortada (elemento a subir)
     recortada.imagen = path
 
@@ -62,6 +62,8 @@ export class BdatosService {
       })
       //Elimina publicacion
       this.http.delete('https://apps-mob-insta-default-rtdb.firebaseio.com/TodasPublicaciones/'+ idpub + '.json').subscribe()
+      //Eliminar del perfil
+      //
     }
   }
 
